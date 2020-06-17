@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Form from './Components/Form';
 
@@ -37,6 +36,11 @@ function App() {
     <div className="App">
       <h1>Team Members:</h1>
       {teamMembers.map(item => <p key={item.id}>Name: {item.firstName} {item.lastName} Email: {item.email} Role: {item.role}</p>)}
+
+      <Form 
+        onInputChange={onInputChange}
+        formValues={formValues}
+        onFormSubmit={onFormSubmit} />
     </div>
   );
 }
